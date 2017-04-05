@@ -9,12 +9,17 @@ namespace ChoreDataAccess.Repositories
 {
     public class ChoreRepository : IChoreRepository
     {
-        public IEnumerable<Chore> GetList()
+        public EntityBase Get(int id)
         {
-            var results = new List<Chore>();
+            throw new NotImplementedException();
+        }
 
-            string sqlString = "SELECT chore " +
-                               "FROM chorelist ";
+        public IEnumerable<EntityBase> GetList()
+        {
+            var results = new List<EntityBase>();
+
+            string sqlString = "SELECT Chore, Id " +
+                               "FROM Chore ";
 
             using (var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;"))
             {
@@ -28,22 +33,22 @@ namespace ChoreDataAccess.Repositories
                         var i = -1;
                         chore.Id = (int)reader[++i];
                         chore.Name = reader[++i].ToString();
-                        chore.Completed = (DateTime)reader[++i];
-
+                        
                         results.Add(chore);
-
                     }
+
                     reader.Close();
                 }
             }
 
             return results;
         }
-
-        public Chore Save(Chore entity)
+        
+        public EntityBase Save(EntityBase entity)
         {
-            
-            return entity;
+            throw new NotImplementedException();
+            // TODO
+            // return entity;
         }
     }
 }

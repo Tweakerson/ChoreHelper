@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace ChoreDataAccess.Interface
 {
-    public interface IChoreRepository
+    public interface IChoreRepository : IRepository
     {
-        IEnumerable<Chore> GetList();
+        EntityBase Get(int id);
 
-        Chore Save(Chore entity);
+        IEnumerable<EntityBase> GetList();
+
+        EntityBase Save(EntityBase entity);
     }
 }

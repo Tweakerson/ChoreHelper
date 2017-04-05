@@ -5,10 +5,10 @@ namespace ChoreServices.Interface
 {
     public interface IChoreService
     {
-        Chore Save(Chore entity);
+        EntityBase Save(EntityBase entity);
 
-        IEnumerable<Chore> GetList();
+        IEnumerable<EntityBase> GetList();
 
-        Chore GetRandomChore();
+        EntityBase GetRandomChore();
     }
 }
