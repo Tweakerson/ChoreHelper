@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ChoreData;
 using ChoreServices.Interface;
 using ChoreDataAccess.Interface;
+using System.Linq;
 
 namespace ChoreServices.Services
 {
@@ -12,6 +13,11 @@ namespace ChoreServices.Services
 
         public ChoreService(IRepository repo)
         {
+            if(repo == null)
+            {
+                throw new ArgumentNullException(nameof(repo) + " cannot be null");
+            }
+
             _repository = repo;
         }
 
@@ -22,12 +28,19 @@ namespace ChoreServices.Services
 
         public EntityBase GetRandomChore()
         {
-            throw new NotImplementedException();
+            var list = _repository.GetList();
+
+            return list.FirstOrDefault();
         }
 
         public EntityBase Save(EntityBase entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity) + " cannot be null");
+            }
+
+            return _repository.Save(entity);
         }
     }
 }
