@@ -9,19 +9,19 @@ namespace ChoreDataAccess.Repositories
 {
     public class ChoreRepository : IChoreRepository
     {
-        public EntityBase Get(int id)
+        public Chore Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<EntityBase> GetList()
+        public IEnumerable<Chore> GetList()
         {
-            var results = new List<EntityBase>();
+            var results = new List<Chore>();
 
             string sqlString = "SELECT Chore, Id " +
                                "FROM Chore ";
 
-            using (var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;"))
+            using (var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS01;Database=ChoreHelper;Trusted_Connection=True;"))
             {
                 connection.Open();
                 using (var comm = new SqlCommand(sqlString, connection))
@@ -31,9 +31,9 @@ namespace ChoreDataAccess.Repositories
                     {
                         Chore chore = new Chore();
                         var i = -1;
-                        chore.Id = (int)reader[++i];
                         chore.Name = reader[++i].ToString();
-                        
+                        chore.Id = (int)reader[++i];
+
                         results.Add(chore);
                     }
 
@@ -44,7 +44,7 @@ namespace ChoreDataAccess.Repositories
             return results;
         }
         
-        public EntityBase Save(EntityBase entity)
+        public Chore Save(Chore entity)
         {
             throw new NotImplementedException();
             // TODO

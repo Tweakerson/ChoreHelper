@@ -9,9 +9,9 @@ namespace ChoreServices.Services
 {
     public class ChoreService : IChoreService
     {
-        private readonly IRepository _repository;
+        private readonly IChoreRepository _repository;
 
-        public ChoreService(IRepository repo)
+        public ChoreService(IChoreRepository repo)
         {
             if(repo == null)
             {
@@ -21,19 +21,19 @@ namespace ChoreServices.Services
             _repository = repo;
         }
 
-        public IEnumerable<EntityBase> GetList()
+        public IEnumerable<Chore> GetList()
         {
             return _repository.GetList();
         }
 
-        public EntityBase GetRandomChore()
+        public Chore GetRandomChore()
         {
             var list = _repository.GetList();
 
             return list.FirstOrDefault();
         }
 
-        public EntityBase Save(EntityBase entity)
+        public Chore Save(Chore entity)
         {
             if (entity == null)
             {

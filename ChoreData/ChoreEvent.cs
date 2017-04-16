@@ -8,10 +8,10 @@ namespace ChoreData
 {
     public class ChoreEvent : EntityBase
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         public Chore Chore { get; set; }
 
-        public DateTime Completed { get; set; }
+        public DateTime? Completed { get; set; }
     }
 }
