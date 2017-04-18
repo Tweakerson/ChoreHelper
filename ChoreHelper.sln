@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreServices.Tests", "Chor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreHelperDesktopUI", "ChoreHelperDesktopUI\ChoreHelperDesktopUI.csproj", "{2754A979-A937-4647-BB6D-11402E7B860E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreAPI", "ChoreAPI\ChoreAPI.csproj", "{F3B536F9-ACD4-4114-8622-BE06AEB0AE38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2754A979-A937-4647-BB6D-11402E7B860E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2754A979-A937-4647-BB6D-11402E7B860E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2754A979-A937-4647-BB6D-11402E7B860E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B536F9-ACD4-4114-8622-BE06AEB0AE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B536F9-ACD4-4114-8622-BE06AEB0AE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B536F9-ACD4-4114-8622-BE06AEB0AE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B536F9-ACD4-4114-8622-BE06AEB0AE38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
