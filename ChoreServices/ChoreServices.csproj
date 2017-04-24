@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IChoreEventService.cs" />
     <Compile Include="Interface\IChoreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ChoreEventService.cs" />
     <Compile Include="Services\ChoreService.cs" />
   </ItemGroup>
   <ItemGroup>
