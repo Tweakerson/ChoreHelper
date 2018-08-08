@@ -96,20 +96,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChoreDataAccess\ChoreDataAccess.csproj">
-      <Project>{4912A55F-0F4E-4E72-A9EC-44C8FBE336BE}</Project>
-      <Name>ChoreDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChoreData\ChoreData.csproj">
-      <Project>{019CCA07-7116-4739-9283-7AFC794B080A}</Project>
-      <Name>ChoreData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChoreServices\ChoreServices.csproj">
-      <Project>{0DD1C5C7-57B6-49DB-923E-365C16AF0FF8}</Project>
-      <Name>ChoreServices</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

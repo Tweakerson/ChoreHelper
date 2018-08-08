@@ -40,21 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IChoreEventService.cs" />
-    <Compile Include="Interface\IChoreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ChoreEventService.cs" />
-    <Compile Include="Services\ChoreService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChoreDataAccess\ChoreDataAccess.csproj">
       <Project>{4912a55f-0f4e-4e72-a9ec-44c8fbe336be}</Project>
       <Name>ChoreDataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChoreData\ChoreData.csproj">
-      <Project>{019cca07-7116-4739-9283-7afc794b080a}</Project>
-      <Name>ChoreData</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

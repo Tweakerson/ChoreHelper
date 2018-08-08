@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -233,14 +234,26 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BusinessLogic\ChoreEventService.cs" />
+    <Compile Include="BusinessLogic\ChoreService.cs" />
+    <Compile Include="BusinessLogic\IChoreEventService.cs" />
+    <Compile Include="BusinessLogic\IChoreService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ChoreController.cs" />
+    <Compile Include="DataAccess\ChoreEventRepository.cs" />
+    <Compile Include="DataAccess\ChoreRepository.cs" />
+    <Compile Include="DataAccess\IChoreEventRepository.cs" />
+    <Compile Include="DataAccess\IChoreRepository.cs" />
+    <Compile Include="DataAccess\IRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Chore.cs" />
+    <Compile Include="Models\ChoreEvent.cs" />
+    <Compile Include="Models\EntityBase.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -315,20 +328,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChoreDataAccess\ChoreDataAccess.csproj">
-      <Project>{4912a55f-0f4e-4e72-a9ec-44c8fbe336be}</Project>
-      <Name>ChoreDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChoreData\ChoreData.csproj">
-      <Project>{019cca07-7116-4739-9283-7afc794b080a}</Project>
-      <Name>ChoreData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChoreServices\ChoreServices.csproj">
-      <Project>{0dd1c5c7-57b6-49db-923e-365c16af0ff8}</Project>
-      <Name>ChoreServices</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
